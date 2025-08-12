@@ -1,1 +1,150 @@
+<!-- Assume I am creating a user registration form for Employee Information Management System -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <h1>Where it works</h1>
+  <p>The location where this Employee Information Management System (EIMS) works are listed in the below lists</p>
+  <ul>
+    <li>Govermental organizations
+    <ol>
+      <li>Schools</li>
+       <li>Universities</li>
+       <li>Bank sectors</li>
+      <li>Revenue administration offices</li>
+      <li>Other administration offices</li>
+    </ol>
+    </li>
+    <li> Non Governmental Organizations</li>
+  </ul>
+  <h2>Information style</h2>
+  <p> The EIMS have managed like the below table. The manager can get their information simply in table. It is also simple to filter out based on his/her filteration requirement.</p>
+ <table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Sex</th>
+      <th>Birth Date</th>
+      <th>Age</th>
+      <th>Recruitment Date</th>
+      <th>Experience in Years</th>
+      <th>Role</th>
+      <th>Salary in ETB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Behaylu</td>
+      <td>Tadele</td>
+      <td>Alemu</td>
+      <td>0943588129</td>
+      <td>behaylutadele18@gmail.com</td>
+      <td>M</td>
+      <td>12/12/1998</td>
+      <td>22</td>
+      <td>12/12/2022</td>
+      <td>3</td>
+      <td>Lecturer</td>
+      <td>14000</td>
+    </tr>
+  </tbody>
+</table>
+  <h2>Employee Registration Form</h2>
 
+  <form action="#enhanced-form.php" method="POST">
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" placeholder="enter first name" autocomplete="on" required><br><br>
+
+    <label for="middleName">Middle Name:</label><br>
+    <input type="text" id="middleName" name="middleName" placeholder="enter middle name" required><br><br>
+
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" placeholder="enter Last name" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="like +2519000000" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="enter Last name" required><br><br>
+
+    <label for="sex">Sex:</label><br>
+    <select id="sex" name="sex" required>
+      <option value="">--Select--</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Not to say</option>
+    </select><br><br>
+
+    <label for="birthDate">Birth Date:</label><br>
+    <input type="date" id="birthDate" name="birthDate" required><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="0" required><br><br>
+
+    <label for="recruitDate">Recruitment Date:</label><br>
+    <input type="date" id="recruitDate" name="recruitDate" required><br><br>
+
+    <label for="role">Role:</label><br>
+    <input type="text" id="role" name="role" placeholder="enter your current position" required><br><br>
+
+    <label for="salary">Salary in ETB:</label><br>
+    <input type="number" id="salary" name="salary" min="1000" required><br><br>
+
+          <fieldset>
+          <legend>Other Experience</legend>
+
+          <label for="otherExperienceRole">Role/Position:</label><br>
+          <input type="text" id="otherExperienceRole" name="otherExperienceRole"><br><br>
+
+          <label for="experienceStart">Start Date:</label><br>
+          <input type="date" id="experienceStart" name="experienceStart"><br><br>
+
+          <label for="experienceEnd">End Date:</label><br>
+          <input type="date" id="experienceEnd" name="experienceEnd"><br><br>
+
+          <label for="organization">Organization Name:</label><br>
+          <input type="text" id="organization" name="organization"><br><br>
+
+          <label for="experienceDesc">Description (optional):</label><br>
+          <textarea id="experienceDesc" name="experienceDesc" rows="3" cols="40"></textarea><br><br>
+
+        </fieldset>
+
+  
+      <fieldset>
+        <legend>System Login Information</legend>
+
+        <label for="username">User Name:</label><br>
+        <input type="text" id="username" name="username" placeholder="enter your user name" required><br><br>
+
+        <label for="password">New Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter new password" 
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="At least 8 characters with one uppercase, one lowercase, and one number."
+               required><br><br>
+
+        <label for="conpassword">Confirm Password:</label><br>
+        <input type="password" id="conpassword" name="conpassword" placeholder="Confirm your password" 
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+               title="Please re-enter the same password."
+               required><br><br>
+
+        <label for="role">Position:</label><br>
+        <input type="role" id="role" name="role" value="Employee" readonly>    
+
+        <p><em>*Note: Both passwords must match and follow the required format.</em></p>
+      </fieldset>
+
+    <input type="submit" value="Submit" id="button">
+  </form>
+</body>
+</html>
